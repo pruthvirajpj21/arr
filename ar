@@ -1,0 +1,28 @@
+long long int aro[n],temp,max=0;
+
+for(int i=0;i<n;i++)
+{
+    aro[i]=0;
+}
+
+
+for(int p=0;p<queries_rows;p++)
+{
+    for(int l=((queries[p][0])-1);l<=((queries[p][1])-1);l++)
+    {
+          aro[l]=aro[l]+queries[p][2];
+    }
+}
+
+
+for(int i=0;i<n;i++)
+{
+    if(aro[i]>max)
+    {
+        max=aro[i];
+    }
+}
+
+
+return max;
+
